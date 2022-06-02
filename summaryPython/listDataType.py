@@ -57,3 +57,37 @@ print(a[1:4])
 
 # List Comprehension : 리스트를 초기화 하는 방법 중 하나
 # 대괄호 안에 조건문과 반복문을 적용하여 리스트를 초기화 할 수 있다.
+
+# 0~9의 수를 포함하는 리스트
+array = [i for i in range(10)]
+print(array)
+
+# 0~49
+a = [i for i in range(50)]
+print(a)
+
+# 0~19의 수 중에서 홀수만 포함하는 리스트
+array = [i for i in range(20) if i & 2 == 1]
+print(array)
+
+# 1부터 9까지의 수들의 제곱 값을 포함하는 리스트
+array = [i * i for i in range(1, 10)]
+print(array)
+
+# 코드1 : List Comprehension
+array = [i for i in range(20) if i % 2 == 1]
+print(array)
+
+# 코드2 : 일반적인 코드
+array = []
+for i in range(20):
+    if i % 2 == 1:
+        array.append(i)
+
+print(array)
+
+## List Comprehension은 2차원 리스트를 초기화 할 때 효과적으로 사용될 수 있다.
+# N * M 크기의 2차원 리스트를 한 번에 초기화 해야할 때 매우 유용하다. (문제 상황이 이래서 유용)
+# ex. array = [[0] * m for _ in range(n)]
+# 잘못된 예시 : array = [[0] * m] * n 
+# (전체 리스트 안에 포함된 각 리스트가 모두 같은 객체로 인식됨, 참조값을 복사하는 것)
