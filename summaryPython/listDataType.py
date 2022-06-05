@@ -91,3 +91,90 @@ print(array)
 # ex. array = [[0] * m for _ in range(n)]
 # 잘못된 예시 : array = [[0] * m] * n 
 # (전체 리스트 안에 포함된 각 리스트가 모두 같은 객체로 인식됨, 참조값을 복사하는 것)
+
+# N * M 크기의 2차원 리스트 초기화
+n = 4
+m = 3
+array = [[0] * m for _ in range(n)]
+print(array)
+
+array[1][1] = 5
+print(array) # [[0, 0, 0], [0, 5, 0], [0, 0, 0], [0, 0, 0]]
+
+# N * M 크기의 2차원 리스트 초기화 (잘못된 방법)
+n = 4
+m = 3
+array = [[0] * m] * n
+print(array)
+
+array[1][1] = 5
+print(array) # [[0, 5, 0], [0, 5, 0], [0, 5, 0], [0, 5, 0]]
+
+# 언더바(_)
+# 파이썬에서는 반복을 수행하되 반복을 위한 변수의 값을 무시하고자 할 때 언더바(_)를 자주 사용한다.
+# 1. 1~9까지의 자연수 더하기
+summary = 0
+for i in range(1, 10):
+    summary += i
+print(summary)
+
+# 2. hello world를 5번 출력하기
+for _ in range(5):
+    print('hello world')
+
+# 자주 사용하는 리스트 관련 method
+# append() : 리스트에 원소를 하나 삽입할 때 사용한다.
+# 사용법 : 변수명.append() / 시간복잡도 : O(1)
+# sort() : 기본 정렬 기능으로 오름차순으로 정렬한다.
+# 사용법 : 변수명.sort() / 시간복잡도 : O(NlogN)
+# sort(reverse = True) : 내림차순으로 정렬한다.
+# 사용법 : 변수명.sort(reverse = True) / 시간복잡도 : O(NlogN)
+# reverse() : 리스트의 원소의 순서를 모두 뒤집어 놓는다.
+# 사용법 : 변수명.reverse() / 시간복잡도 : O(N)
+# insert() : 특정한 인덱스 위치에 원소를 삽입할 때 사용한다.
+# 사용법 : insert(삽입할 위치 인덱스, 값) / 시간복잡도 : O(N)
+# count() : 리스트에서 특정한 값을 가지는 데이터의 개수를 셀 때 사용한다.
+# 사용법 : 변수명.count(특정 값) / 시간복잡도 : O(N)
+# remove() : 특정한 값을 갖는 원소를 제거하는데, 값을 가진 원소가 여러 개면 하나만 제거한다.
+# 사용법 : 변수명.remove(특정 값) / 시간복잡도 : O(N)
+
+# 리스트 관련 기타 method
+a = [1, 4, 3]
+print("기본 리스트: ", a)
+
+# 리스트에 원소 삽입
+a.append(2)
+print("삽입: ", a)
+
+# 오름차순 정렬
+a.sort()
+print("오름차순 정렬: ", a)
+
+# 내림차순 정렬
+a.sort(reverse = True)
+print("내림차순 정렬: ", a)
+
+a = [4, 3, 2, 1]
+
+# 리스트 원소 뒤집기
+a.reverse()
+print("원소 뒤집기 :", a)
+
+# 특정 인덱스에 데이터 추가
+a.insert(2, 3)
+print("인덱스 2에 3 추가 :", a)
+
+# 특정 값인 데이터 개수 세기
+print("값이 3인 데이터 개수: ", a.count(3))
+
+# 특정 값 데이터 삭제
+a.remove(1)
+print("값이 1인 데이터 삭제 :", a)
+
+# 리스트에서 특정 값을 가지는 원소를 모두 제거하기
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = {3, 5} # 집합 자료형
+
+# remove_list에 포함되지 않은 값만을 저장
+result = [i for i in a if i not in remove_set]
+print(result)
