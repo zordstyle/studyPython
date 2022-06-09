@@ -45,3 +45,14 @@ print("정답은 "+str(answer)+"입니다.") # 정수형을 문자형으로 변�
 answer = 7
 print(f"정답은 {answer}입니다.")
 
+# # 데이터의 개수 입력
+# n = int(input())
+# # 각 데이터를 공백을 기준으로 구분하여 입력
+# data = list(map(int, input().split()))
+
+# data.sort(reverse=True)
+# print(data)
+
+# a, b, c를 공백을 기준으로 구분하여 입력
+a, b, c = map(int, input().split())
+print(a, b, c)
