@@ -115,4 +115,21 @@ print(add(3, 7))
 # 람다 표현식으로 구현한 add() 메서드
 print((lambda a, b: a + b)(13, 7))
 
-# 람다 표현식이 좋은 경우 : 어떤 함수 자체를 입력으로 받는 또 다른 함수가 있는 경우, 함수의 기능이 간단하거나 한 번만 사용하는 경우, 
+# 람다 표현식이 좋은 경우 : 어떤 함수 자체를 입력으로 받는 또 다른 함수가 있는 경우, 함수의 기능이 간단하거나 한 번만 사용하는 경우.
+# 람다 표현식 예시 : 내장 함수에서 자주 사용되는 람다 함수
+array = [('홍길동', 50), ('이순신', 32), ('아무개', 74)]
+
+def my_key(x):
+    return x[1]
+
+print(sorted(array, key=my_key))
+print(sorted(array, key=lambda x: x[1]))
+
+# 람다 표현식 예시 : 여러 개의 리스트에 적용
+list1 = [1, 2, 3, 4, 5]
+list2 = [6, 7, 8, 9, 10]
+
+# map : 각각의 원소에 어떠한 함수를 사용할 때 사용
+result = map(lambda a, b: a + b, list1, list2)
+
+print(list(result))
