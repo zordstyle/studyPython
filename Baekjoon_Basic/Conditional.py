@@ -32,17 +32,24 @@
 #         print(str(a) + " " + str(b))
 
 ### 2525번 : 오븐 시계
-h, b = map(int, input().split())
-c = int(input())
-m = b + c
-output = str(h) + " " + str(m)
-if m < 60:
-    print(output)
-else:
-    h += m / 60
-    m = m % 60
-    if h >= 24:
-        h = h % 24
-        print(output)
-    else:
-        print(output)
+# h, b = map(int, input().split())
+# c = int(input())
+# m = b + c
+# if m < 60:
+#     print(str(h) + " " + str(m))
+# else:
+#     h += int(m / 60)
+#     m = m % 60
+#     if h >= 24:
+#         h = h % 24
+#         print(str(h) + " " + str(m))
+#     else:
+#         print(str(h) + " " + str(m))
+
+### 2480번 : 주사위 세개
+N = input().split()
+print(N)
+print(N[0])
+print(N[1])
+print(N[2])
+print(N[3])
