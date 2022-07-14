@@ -53,14 +53,28 @@
 # print(x)
 # print(y)
 
-import sys
-T = int(sys.stdin.readline().rstrip())
-a = 0
-list = []
-while(a < T):
-    p, q = map(int, sys.stdin.readline().split())
-    list.append(p+q)
-    a += 1
+# import sys
+# T = int(sys.stdin.readline().rstrip())
+# a = 0
+# list = []
+# while(a < T):
+#     p, q = map(int, sys.stdin.readline().split())
+#     list.append(p+q)
+#     a += 1
 
-for x in list:
-    print(x)
+# for x in list:
+#     print(x)
+
+
+import sys
+input = sys.stdin.readline
+T = int(input())
+list = []
+while(T >= 1):
+    a, b = map(int, input().split())
+    list.append(a+b)
+    T -= 1
+
+for x in list:    
+    print("Case #"+str(a)+": "+str(x))
+    y += 1
