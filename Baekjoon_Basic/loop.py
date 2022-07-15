@@ -65,7 +65,7 @@
 # for x in list:
 #     print(x)
 
-
+### 11021번 : A+B -7
 import sys
 input = sys.stdin.readline
 T = int(input())
@@ -74,7 +74,7 @@ while(T >= 1):
     a, b = map(int, input().split())
     list.append(a+b)
     T -= 1
-
-for x in list:    
+a = 1
+for x in list:
     print("Case #"+str(a)+": "+str(x))
-    y += 1
+    a += 1
