@@ -66,15 +66,32 @@
 #     print(x)
 
 ### 11021번 : A+B -7
+# import sys
+# input = sys.stdin.readline
+# T = int(input())
+# list = []
+# while(T >= 1):
+#     a, b = map(int, input().split())
+#     list.append(a+b)
+#     T -= 1
+# a = 1
+# for x in list:
+#     print("Case #"+str(a)+": "+str(x))
+#     a += 1
+
+### 11022번 : A+B -8
+# str()에러 : string은 integer로 바로 변환 불가
 import sys
-input = sys.stdin.readline
+print = sys.stdin.readline
+
 T = int(input())
 list = []
-while(T >= 1):
+for x in range(1, T+1):
     a, b = map(int, input().split())
-    list.append(a+b)
-    T -= 1
-a = 1
-for x in list:
-    print("Case #"+str(a)+": "+str(x))
-    a += 1
+    print(a+b)
+    # sum = a+b
+    # print(a+b)
+    # print(sum)
+    # print(x)
+    #result = "Case #"+str(x)+": "+str(a)+" + "+str(b)+" = "+str(sum)
+    #print(result)
