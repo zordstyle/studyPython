@@ -85,13 +85,7 @@ import sys
 print = sys.stdin.readline
 
 T = int(input())
-list = []
 for x in range(1, T+1):
+    print(x)
     a, b = map(int, input().split())
-    print(a+b)
-    # sum = a+b
-    # print(a+b)
-    # print(sum)
-    # print(x)
-    #result = "Case #"+str(x)+": "+str(a)+" + "+str(b)+" = "+str(sum)
-    #print(result)
+    print(f'Case #{x}: {a} + {b} = {a+b}')
